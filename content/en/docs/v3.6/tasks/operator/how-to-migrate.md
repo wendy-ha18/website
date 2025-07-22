@@ -36,7 +36,7 @@ The following steps show how to migrate your etcd data from v2 to v3 using `etcd
 
 ### Migration Process
 
-1. Set up test key using v2 API
+- Step 1: Set up test key using v2 API
 
 ```sh
 export ETCDCTL_API=2
@@ -44,11 +44,11 @@ etcdctl --endpoints=http://$ENDPOINT set foo bar
 etcdctl --endpoints=http://$ENDPOINT --output="json" get foo
 ```
 
-2. Stop each etcd node (one at a time)
+- Step 2: Stop each etcd node (one at a time)
 
 Before running the migration, stop your etcd node to ensure data consistency.
 
-3. Run the migration tool
+- Step 3: Run the migration tool
 
 Switch to API v3 and use etcdctl migrate to transform the v2 store.
 
@@ -59,10 +59,10 @@ etcdctl --endpoints=http://$ENDPOINT migrate \
   --wal-dir="default.etcd/member/wal"
 ```
 
-4. Restart etcd node after migrate
+- Step 4: Restart etcd node after migrate
 Repeat steps 2–4 for each etcd node one at a time in your cluster.
 
-5. Confirm the data is accessible via v3 API
+- Step 5: Confirm the data is accessible via v3 API
 
 ```sh
 etcdctl --endpoints=$ENDPOINTS get /foo
