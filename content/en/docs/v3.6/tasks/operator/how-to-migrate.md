@@ -6,17 +6,16 @@ weight: 1200
 
 `migrate` to transform etcd v2 data model to v3 data model.
 
-> [!Warning] **Deprecated functionality:** 
-> 
+> [!Warning] **Deprecated functionality:**
+>
 > The `etcdctl migrate` command was removed in etcd v3.5.0 ([pull/12971](https://github.com/etcd-io/etcd/pull/12971)). If your etcd cluster is already running v3.5 or higher, you can no longer migrate v2 data to v3 using this method.  
-> 
+>
 > You **must use etcdctl v3.4 or earlier** to perform the migration ([CHANGELOG-3.5](https://github.com/etcd-io/etcd/blob/main/CHANGELOG/CHANGELOG-3.5.md#etcdctl-v3-3)). However please take appropriate precautions when using it, as it is no longer officially supported or tested in recent releases.  
-
-
 
 ## Pre-requisites
 
 Before migrating from etcd v2 to v3, ensure the following:
+
 - A currently running etcd v2 cluster.
 - The `etcdctl` CLI tool version <= v3.4.
 - Access to each etcd node and their data directories.
@@ -52,6 +51,7 @@ Before running the migration, stop your etcd node to ensure data consistency.
 3. Run the migration tool
 
 Switch to API v3 and use etcdctl migrate to transform the v2 store.
+
 ```sh
 export ETCDCTL_API=3
 etcdctl --endpoints=http://$ENDPOINT migrate \
@@ -90,8 +90,6 @@ etcdctl --endpoints=$ENDPOINT migrate --data-dir="default.etcd" --wal-dir="defau
 etcdctl --endpoints=$ENDPOINTS get /foo
 ```
 
-
 ## Visual guide for reference
 
 ![12_etcdctl_migrate_2016061602](https://storage.googleapis.com/etcd/demo/12_etcdctl_migrate_2016061602.gif)
-
