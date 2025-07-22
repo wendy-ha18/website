@@ -32,7 +32,7 @@ The following steps show how to migrate your etcd data from v2 to v3 using `etcd
 - `--data-dir`: Path to the data directory (default: `default.etcd`). View more at [etcd flags](https://etcd.io/docs/v3.6/op-guide/configuration/#member).
 - `--wal-dir`: The write-ahead log directory inside `data-dir` (default: `default.etcd/member/wal`). View more at [etcd flags](https://etcd.io/docs/v3.6/op-guide/configuration/#member).
 - `set`: Command to set a key-value pair in etcd v2 (View [READMEv2](https://github.com/etcd-io/etcd/blob/main/etcdctl/READMEv2.md#setting-key-values) for more details. In etcd v3, the equivalent command is `put` instead of `set`, see the [READMEv3](https://github.com/etcd-io/etcd/tree/main/etcdctl#key-value-commands)) for reference.
-- `get`: Command to retrieve a key-value pair (View [Read keys](https://etcd.io/docs/v3.6/dev-guide/interacting_v3/#read-keys))
+- `get`: Command to retrieve a key-value pair (View [Read keys](https://etcd.io/docs/v3.6/dev-guide/interacting_v3/#read-keys)).
 
 ### Migration Process
 
