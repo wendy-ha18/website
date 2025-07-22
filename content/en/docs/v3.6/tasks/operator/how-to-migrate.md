@@ -7,7 +7,7 @@ weight: 1200
 `migrate` to transform etcd v2 data model to v3 data model.
 
 {{% alert color="warning" %}}
-<i class="fas fa-exclamation-triangle mr-1"></i>  **Deprecated functionality:**
+**Deprecated functionality:**
 
 The `etcdctl migrate` command was removed in etcd v3.5.0 ([pull/12971](https://github.com/etcd-io/etcd/pull/12971)). If your etcd cluster is already running v3.5 or higher, you can no longer migrate v2 data to v3 using this method.  
 
