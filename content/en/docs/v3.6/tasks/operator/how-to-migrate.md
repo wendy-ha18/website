@@ -4,7 +4,7 @@ description: etcd v2 to v3 migration guide
 weight: 1200
 ---
 
-`migrate` to transform etcd v2 data model to v3 data model.
+`migrate` to transform etcd v2 data model to v3 data format.
 
 {{% alert color="warning" %}}
 ⚠️ **Deprecated functionality:**
